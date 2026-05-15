@@ -311,63 +311,80 @@ return div.innerHTML;
 /* =========================================
    INIT COMMENT FORM
 ========================================= */
-
 function initCommentForm(){
 
-const form = document.getElementById('comment-form');
+    const form = document.getElementById('comment-form');
 
-if(!form) return;
+    if(!form) return;
 
-form.addEventListener('submit', async (e)=>{
+    form.addEventListener('submit', (e)=>{
 
-e.preventDefault();
+        e.preventDefault();
 
-const nameInput = document.getElementById('comment-name');
-const messageInput = document.getElementById('comment-message');
+        const nameInput = document.getElementById('comment-name');
+        const messageInput = document.getElementById('comment-message');
 
-const submitBtn = form.querySelector('.btn-submit');
+        const submitBtn = form.querySelector('.btn-submit');
 
-const name = nameInput.value.trim();
-const message = messageInput.value.trim();
+        const name = nameInput.value.trim();
+        const message = messageInput.value.trim();
 
-if(!name || !message) return;
+        if(!name || !message){
 
-submitBtn.disabled = true;
-submitBtn.innerText = 'Mengirim...';
+            alert('Isi dulu bro 😄');
+            return;
 
-const result = await CommentsManager.submitComment(name, message);
+        }
 
-if(result.success){
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Mengirim...';
 
-form.reset();
+        fetch(API_URL,{
 
-showToast('Ucapan berhasil dikirim!');
+            method:'POST',
 
-CommentsManager.loadComments();
+            body:JSON.stringify({
+                name,
+                message
+            })
 
-}else{
+        })
+        .then(res => res.json())
 
-showToast('Gagal mengirim ucapan');
+        .then(()=>{
+
+            submitBtn.innerText = 'Ucapan terkirim 💜';
+
+            form.reset();
+
+            // RELOAD COMMENTS
+            CommentsManager.loadComments();
+
+            setTimeout(()=>{
+
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Kirim Ucapan';
+
+            },2000);
+
+        })
+
+        .catch(()=>{
+
+            submitBtn.innerText = 'Gagal mengirim 😢';
+
+            setTimeout(()=>{
+
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Kirim Ucapan';
+
+            },2000);
+
+        });
+
+    });
 
 }
-
-submitBtn.disabled = false;
-submitBtn.innerText = 'Kirim Ucapan';
-
-});
-
-}
-
-/* =========================================
-   LOAD ON START
-========================================= */
-
-document.addEventListener('DOMContentLoaded', ()=>{
-
-CommentsManager.loadComments();
-initCommentForm();
-
-});
 
 // ========================================
 // Copy to Clipboard
