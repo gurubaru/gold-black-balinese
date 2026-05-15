@@ -298,7 +298,7 @@ body.no-scroll {
     pointer-events:none;
     opacity:0.3;
 
-    background-image:url('../prawed/bucu.png');
+    background-image:url('https://gurubaru.github.io/black-gold/prawed/bucu.png');
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
