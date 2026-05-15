@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- META SHARE -->
+    <meta property="og:title" content="Undangan Pawiwahan Sunarta & Mina">
+    <meta property="og:description" content="Undangan Pernikahan 3 Juni 2026">
+    <meta property="og:image" content="https://sunarta-mina.my.id/image/image_thumbnail_landscape.jpg">
+    <meta property="og:url" content="https://sunarta-mina.my.id">
+    <meta property="og:type" content="website" />
+    <title>Undangan Pawiwahan Sunarta & Minaliati</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="../dek_ulik_kamajaya.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Particles Container -->
+    <div id="particles-container" aria-hidden="true"></div>
+
+    <!-- OPENING SCREEN / COVER OVERLAY -->
+    <section class="opening-screen" id="opening-screen">
+        <div class="opening-bg" style="background-image: url('../prawed/RV_08820.webp')"></div>
+        <div class="opening-overlay"></div>
+        <div class="opening-content">
+        <!-- Corner Ornaments -->
+        <div class="corner-ornament top-left" aria-hidden="true"></div>
+        <div class="corner-ornament top-right" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-right" aria-hidden="true"></div> 
+            <span class="label-small">UNDANGAN PAWIWAHAN</span>
+            <h1 class="couple-names">Sunarta & Minaliati</h1>
+            <p class="kepada-text">Kepada Yth.</p>
+            <p class="ibu-bapak">Ibu / Bapak:</p>
+            <div class="guest-name-card">
+                <span id="guest-name-opening" class="guest-name">{{nama_undangan}}</span>
+            </div>
+            <p class="apology-text">Mohon maaf apabila terdapat kesalahan penulisan nama / gelar</p>
+            
+            <!-- Open Invitation Button -->
+            <button class="btn-open-invitation" id="btn-open" onclick="openInvitation()">
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Buka Undangan</span>
+            </button>
+        </div>
+    </section>
+    <!-- END OPENING SCREEN -->
+
+    <!-- Main Container -->
+    <main class="invitation-container" id="main-container">
+        
+        <!-- Card 1: Cover & Invitation -->
+        <section class="card card-1" data-animate>
+        <!-- Corner Ornaments -->
+        <div class="corner-ornament top-left" aria-hidden="true"></div>
+        <div class="corner-ornament top-right" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-right" aria-hidden="true"></div>            
+            <div class="card-inner">
+                <div class="card-left image-overlay">
+                    <div class="image-bg" style="background-image: url('../prawed/RV_08710.webp')"></div>
+                    <div class="gradient-overlay left"></div>
+                </div>
+                <div class="card-right invitation-content">
+                    <div class="invitation-text">
+                        <span class="label-small">UNDANGAN PAWIWAHAN</span>
+                        <h1 class="couple-names">Sunarta & Minaliati</h1>
+                        <p class="kepada-text">Kepada Yth.</p>
+                        <p class="ibu-bapak">Ibu / Bapak:</p>
+                        <div class="guest-name-card">
+                            <span id="guest-name" class="guest-name">{{nama_undangan}}</span>
+                        </div>
+                        <p class="apology-text">Mohon maaf apabila terdapat kesalahan penulisan nama / gelar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card 2: Couple Details -->
+        <section class="card card-2" data-animate>
+        <!-- Corner Ornaments -->
+        <div class="corner-ornament top-left" aria-hidden="true"></div>
+        <div class="corner-ornament top-right" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-right" aria-hidden="true"></div>
+            <div class="card-inner">
+                <div class="card-left couple-details">
+                    <div class="ongkara-logo">
+                    </div>
+                    <span class="ceremony-label">UPACARA MANUSA YADNYA</span>
+                    <h2 class="ceremony-title">PAWIWAHAN</h2>
+                    
+                    <div class="person-card male">
+                        <h3 class="person-name">I KETUT SUNARTA</h3>
+                        <p class="person-detail">Putra Keempat Dari Pasangan</p>
+                        <p class="parent-names">I Made Kacung (alm.) & Ni Wayan Mangkin</p>
+                        <p class="address">Desa Adat Batuaji, Batubulan Kangin - Gianyar</p>
+                    </div>
+                    
+                    <div class="separator-ampersand">&</div>
+                    
+                    <div class="person-card female">
+                        <h3 class="person-name">NI KOMANG MINALIATI</h3>
+                        <p class="person-detail">Putri Ketiga Dari Pasangan</p>
+                        <p class="parent-names">I Ketut Suana & Ni Made Bari (alm.)</p>
+                        <p class="address">Desa Adat Batuaji, Batubulan Kangin - Gianyar</p>
+                    </div>
+                </div>
+                <div class="card-right couple-photo">
+                    <div class="circular-frame">
+                        <div class="photo-bg" style="background-image: url('../prawed/RV_08717.webp')"></div>
+                        <div class="gradient-overlay left"></div>
+                        <div class="frame-border"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card 3: Event Details -->
+        <section class="card card-3" data-animate>
+        <!-- Corner Ornaments -->
+        <div class="corner-ornament top-left" aria-hidden="true"></div>
+        <div class="corner-ornament top-right" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-right" aria-hidden="true"></div>
+            <div class="card-inner">
+                <div class="card-left event-image">
+                    <div class="circular-frame">
+                        <div class="photo-bg" style="background-image: url('../prawed/RV_08772.webp')"></div>
+                        <div class="gradient-overlay left"></div>
+                        <div class="frame-border"></div>
+                    </div>
+                </div>
+                <div class="card-right event-details">
+                    <div class="prayer-text">
+                        <span class="om-swastyastu">OM SWASTYASTU</span>
+                        <p class="main-prayer">Atas Asung Kertha Wara Nugra Ida Sanghyang Widi Wasa / Tuhan Yang Maha Esa, Perkenankan Kami Mengundang Bapak/Ibu/Saudara/i Pada Upacara Manusa Yadnya Pawiwahan Putra Putri Kami.</p>
+                        
+                        <div class="event-info">
+                            <div class="date-badge">
+                                <span class="day-name">Rabu</span>
+                                <span class="date-number">03</span>
+                                <span class="month-year">Juni 2026</span>
+                            </div>
+                            <div class="time-venue">
+                                <p class="time"><span class="icon">&#x23F0;</span> 12 WITA - selesai</p>
+                                <p class="venue"><span class="icon">&#x1F4CD;</span> Desa Adat Batuaji, Batubulan Kangin - Gianyar</p>
+                            </div>
+                        </div>
+                        
+                        <p class="thanks-text">Atas Kehadiran Serta Doa Restu Bapak/Ibu/Saudara/i, Kami Ucapkan Terima Kasih</p>
+                        <span class="closing-prayer">OM SHANTI SHANTI SHANTI OM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card 4: Location -->
+        <section class="card card-4" data-animate>
+        <!-- Corner Ornaments -->
+        <div class="corner-ornament top-left" aria-hidden="true"></div>
+        <div class="corner-ornament top-right" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-right" aria-hidden="true"></div>
+            <div class="card-inner">
+                <div class="card-left location-info">
+                    <h3 class="location-title">Alamat Detail Lokasi</h3>
+                    <p class="location-address">Didepan Balai Banjar Batuaji</p>
+                    <p class="location-full">Jl. Raya Batubulan, Batubulan Kangin, Kec. Sukawati, Kabupaten Gianyar, Bali</p>
+                    <a href="https://maps.app.goo.gl/asgo5WWqM8gqXGjD6" target="_blank" rel="noopener noreferrer" class="btn-location">
+                        <span class="btn-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </span>
+                        Lihat Lokasi
+                    </a>
+                </div>
+                <div class="card-right map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.7685981561153!2d115.26707877478881!3d-8.618200991427651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23fc501f5f7c9%3A0xd74343faf1aad0cf!2zQmFsZSBCYW5qYXIgQmF0dWFqaSAtIOGsqeGsruGsvuGsqeGsnOGthOGsmuGsg-GsqeGsouGsuOGss-GsmuGstuGtnw!5e0!3m2!1sen!2sid!4v1777857655776!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card 5: Countdown & Gift -->
+        <section class="card card-5" data-animate>
+        <!-- Corner Ornaments -->
+        <div class="corner-ornament top-left" aria-hidden="true"></div>
+        <div class="corner-ornament top-right" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+        <div class="corner-ornament bottom-right" aria-hidden="true"></div>
+            <div class="card-inner">
+                <div class="card-left countdown-section">
+                    <h3 class="countdown-title">Menghitung Hari</h3>
+                    <div class="countdown-container" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-label">Hari</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-label">Jam</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-label">Menit</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label">Detik</span>
+                        </div>
+                    </div>
+                    <p class="countdown-subtitle">Menuju Hari Bahagia</p>
+                </div>
+                <div class="card-right gift-section">
+                    <h3 class="gift-title">Wedding Gift</h3>
+                    <p class="gift-subtitle">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, kami menyediakan:</p>
+                    
+                    <div class="gift-options">
+                        <div class="gift-card bank-transfer">
+                            <span class="gift-label">Transfer Bank</span>
+                            <div class="bank-info">
+                                <img src="../prawed/bca.webp" alt="BCA" class="bank-logo">
+                                <span class="account-number">7730913022</span>
+                                <span class="account-name">a.n. I Ketut Sunarta</span>
+                            </div>
+                            <button class="btn-copy" data-copy="7730913022">Salin Nomor</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card 6: Closing & Gallery -->
+        <section class="card card-6" data-animate>
+            <!-- Corner Ornaments -->
+            <div class="corner-ornament top-left" aria-hidden="true"></div>
+            <div class="corner-ornament top-right" aria-hidden="true"></div>
+            <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+            <div class="corner-ornament bottom-right" aria-hidden="true"></div>
+            <div class="card-inner">
+                <div class="card-left closing-section">
+                    <div class="closing-content">
+                        <h3 class="closing-title">Kami Yang Berbahagia</h3>
+                        <p class="closing-names">I Ketut Sunarta & Ni Komang Minaliati</p>
+                        <div class="couple-portrait">
+                            <img src="../prawed/RV_08804.webp" alt="Sunarta & Minaliati" loading="lazy">
+                        </div>
+                        <p class="closing-thanks">Atas Kehadiran Dan Waktu Bapak/Ibu/Saudara/i, Kami Mengucapkan Terima Kasih</p>
+                        <p class="closing-wish">Semoga Segala Sesuatu Terbaik Datang Untuk Kita Semua</p>
+                    </div>
+                </div>
+                <div class="card-right gallery-section">
+                    <h3 class="gallery-title">Galeri Momen</h3>
+                    <div class="masonry-gallery">
+                        <div class="gallery-item tall">
+                            <img src="../prawed/RV_08741.webp" alt="Momen 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../prawed/RV_08792.webp" alt="Momen 2" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../prawed/RV_08921.webp" alt="Momen 3" loading="lazy">
+                        </div>
+                        <div class="gallery-item wide">
+                            <img src="../prawed/RV_08820.webp" alt="Momen 4" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../prawed/RV_08959.webp" alt="Momen 5" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card 7: Comments -->
+        <section class="card card-7" data-animate>
+            <!-- Corner Ornaments -->
+            <div class="corner-ornament top-left" aria-hidden="true"></div>
+            <div class="corner-ornament top-right" aria-hidden="true"></div>
+            <div class="corner-ornament bottom-left" aria-hidden="true"></div>
+            <div class="corner-ornament bottom-right" aria-hidden="true"></div>
+            <div class="card-inner">
+                <div class="card-left comments-display">
+                    <h3 class="comments-title">Ucapan & Doa</h3>
+                    <div class="comments-list" id="comments-list">
+                        <!-- Comments will be loaded here -->
+                    </div>
+                </div>
+                <div class="card-right comment-form-section">
+                    <div class="form-bg" style="background-image: url('../prawed/RV_08741.webp')"></div>
+                    <div class="form-overlay"></div>
+                    <form class="comment-form" id="comment-form">
+                        <h4 class="form-title">Kirim Ucapan</h4>
+                        <div class="form-group">
+                            <label for="comment-name">Nama</label>
+                            <input type="text" id="comment-name" name="name" required placeholder="Nama Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-message">Ucapan & Doa</label>
+                            <textarea id="comment-message" name="message" required placeholder="Tulis ucapan dan doa Anda..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Kirim Ucapan</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">Undangan Pawiwahan Sunarta & Minaliati</p>
+            <p class="footer-year">2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
