@@ -2,23 +2,70 @@
    CSS Variables & Reset
 ======================================== */
 :root {
-    --primary: #1A0F0A;
-    --secondary: #2B1B12;
+
+    /* ========================================
+       COLOR PALETTE - BLACK RED GOLD
+    ======================================== */
+
+    --primary: #120909;
+    --secondary: #2A0F0F;
+    --deep-red: #4A0D0D;
+    --dark-red: #7A1515;
+
     --accent-gold: #D4AF37;
+    --accent-gold-soft: #F1D27A;
     --accent-bronze: #B87333;
-    --text: #F8F4EC;
-    --text-muted: rgba(248, 244, 236, 0.7);
-    --bg-gradient: linear-gradient(135deg, #0F0A07 0%, #2B1B12 45%, #1A0F0A 100%);
-    --glass: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(212, 175, 55, 0.2);
-    --shadow-gold: 0 0 40px rgba(212, 175, 55, 0.15);
-    --shadow-deep: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
-    
-    --font-title: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Montserrat', -apple-system, sans-serif;
-    
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    --text: #F8F1E7;
+    --text-muted: rgba(248, 241, 231, 0.72);
+
+    /* Background utama */
+    --bg-gradient:
+        radial-gradient(circle at top, rgba(122,21,21,0.25) 0%, transparent 35%),
+        linear-gradient(
+            135deg,
+            #050505 0%,
+            #120909 30%,
+            #2A0F0F 65%,
+            #050505 100%
+        );
+
+    /* Glass */
+    --glass: rgba(255, 255, 255, 0.045);
+
+    --glass-border:
+        rgba(212, 175, 55, 0.18);
+
+    /* Glow */
+    --shadow-gold:
+        0 0 45px rgba(212, 175, 55, 0.14);
+
+    --shadow-red:
+        0 0 60px rgba(122, 21, 21, 0.12);
+
+    --shadow-deep:
+        0 25px 50px -12px rgba(0, 0, 0, 0.85);
+
+    /* ========================================
+       FONT STYLE - BALI LUXURY
+    ======================================== */
+
+    /* Judul ukiran elegan */
+    --font-title: 'Cormorant Garamond', serif;
+    --font-script: 'Great Vibes', cursive;
+
+    /* isi lebih lembut & modern */
+    --font-body: 'Poppins', sans-serif;
+
+    /* aksen mantra/bali */
+    --font-accent: 'Marcellus', serif;
+
+    /* Transition */
+    --transition-smooth:
+        all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --transition-spring:
+        all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 *, *::before, *::after {
@@ -116,6 +163,84 @@ body.no-scroll {
     max-width: 500px;
 }
 
+.label-small{
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    color: var(--accent-gold-soft);
+    font-weight: 500;
+}
+
+.couple-names{
+    font-family: var(--font-script);
+
+    font-size: clamp(3.5rem, 8vw, 6rem);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    color: #F8F1E7;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 0.03em;
+
+    text-shadow:
+        0 0 15px rgba(212,175,55,0.18),
+        0 0 35px rgba(212,175,55,0.08);
+}
+
+.kepada-text,
+.ibu-bapak{
+    font-family: var(--font-title);
+
+    font-size: 1rem;
+
+    letter-spacing: 0.08em;
+
+    color: rgba(248,241,231,0.82);
+}
+
+.guest-name-card{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.95),
+            rgba(212,175,55,0.08)
+        );
+
+    border: 1px solid rgba(212,175,55,0.35);
+
+    box-shadow:
+        0 0 25px rgba(212,175,55,0.12);
+}
+
+.guest-name{
+    font-family: var(--font-title);
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    color: #2A0F0F;
+
+    letter-spacing: 0.03em;
+}
+
+.apology-text{
+    font-family: var(--font-body);
+
+    font-size: 0.82rem;
+
+    color: rgba(248,241,231,0.58);
+
+    font-style: italic;
+
+    letter-spacing: 0.04em;
+}
+
 /* ========================================
    Particles Container
 ======================================== */
@@ -173,7 +298,7 @@ body.no-scroll {
     pointer-events:none;
     opacity:0.3;
 
-    background-image:url('https://gurubaru.github.io/black-gold/prawed/bucu.png');
+    background-image:url('../prawed/bucu.png');
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
@@ -388,6 +513,31 @@ body.no-scroll {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+.card{
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.03),
+            rgba(122,21,21,0.05)
+        );
+
+    box-shadow:
+        var(--shadow-deep),
+        var(--shadow-gold),
+        var(--shadow-red);
+}
+
+.opening-overlay,
+.form-overlay{
+    background:
+        linear-gradient(
+            135deg,
+            rgba(5,5,5,0.88) 0%,
+            rgba(42,15,15,0.78) 45%,
+            rgba(122,21,21,0.35) 100%
+        );
+}
+
 .card.animate-in {
     opacity: 1;
     transform: translateY(0);
@@ -551,7 +701,7 @@ body.no-scroll {
     width:110px;
     height:110px;
 
-    background-image:url('https://gurubaru.github.io/black-gold/prawed/ongkara.png');
+    background-image:url('../prawed/ongkara.png');
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
@@ -1113,4 +1263,23 @@ body.no-scroll {
     .countdown-value { font-size: 1.75rem; }
     .couple-portrait { width: 150px; height: 150px; }
     .comment-form { padding: 30px 20px; }
+}
+
+.couple-names,
+.ceremony-title,
+.location-title,
+.countdown-title,
+.gift-title,
+.comments-title,
+.gallery-title,
+.form-title,
+.closing-title{
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.om-swastyastu,
+.closing-prayer,
+.separator-ampersand{
+    font-family: var(--font-accent);
 }
