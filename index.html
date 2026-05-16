@@ -18,7 +18,7 @@
 <body class="no-scroll">
     <!-- Background Music -->
     <audio id="bgMusic" loop preload="auto">
-        <source src="https://gurubaru.github.io/sunarta-mina/music/dek_ulik_kamajaya.mp3" type="audio/mpeg">
+        <source src="../dek_ulik_kamajaya.mp3" type="audio/mpeg">
     </audio>
 
     <!-- Floating Particles Container -->
@@ -26,7 +26,7 @@
 
     <!-- OPENING SCREEN / COVER OVERLAY -->
     <section class="opening-screen" id="opening-screen">
-        <div class="opening-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/RV_08820.webp')"></div>
+        <div class="opening-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/paralax_1.webp')"></div>
         <div class="opening-overlay"></div>
         <div class="opening-content">
         <!-- Corner Ornaments -->
@@ -66,8 +66,10 @@
         <div class="corner-ornament bottom-left" aria-hidden="true"></div>
         <div class="corner-ornament bottom-right" aria-hidden="true"></div>            
             <div class="card-inner">
-                <div class="card-left image-overlay">
-                    <div class="image-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/RV_08710.webp')"></div>
+            <!-- OVERLAY -->
+            <div class="card-overlay"></div>
+                <div class="card-left">
+                    <div class="image-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/image_1.webp')"></div>
                     <div class="gradient-overlay left"></div>
                 </div>
                 <div class="card-right invitation-content">
@@ -86,43 +88,70 @@
         </section>
 
         <!-- Card 2: Couple Details -->
-        <section class="card card-2" data-animate>
+        <section class="card" data-animate>
         <!-- Corner Ornaments -->
         <div class="corner-ornament top-left" aria-hidden="true"></div>
         <div class="corner-ornament top-right" aria-hidden="true"></div>
         <div class="corner-ornament bottom-left" aria-hidden="true"></div>
         <div class="corner-ornament bottom-right" aria-hidden="true"></div>
-            <div class="card-inner">
-                <div class="card-left couple-details">
-                    <div class="ongkara-logo">
-                    </div>
-                    <span class="ceremony-label">UPACARA MANUSA YADNYA</span>
-                    <h2 class="ceremony-title">PAWIWAHAN</h2>
-                    
-                    <div class="person-card male">
-                        <h3 class="person-name">I KETUT SUNARTA</h3>
-                        <p class="person-detail">Putra Keempat Dari Pasangan</p>
-                        <p class="parent-names">I Made Kacung (alm.) & Ni Wayan Mangkin</p>
-                        <p class="address">Desa Adat Batuaji, Batubulan Kangin - Gianyar</p>
-                    </div>
-                    
-                    <div class="separator-ampersand">&</div>
-                    
-                    <div class="person-card female">
-                        <h3 class="person-name">NI KOMANG MINALIATI</h3>
-                        <p class="person-detail">Putri Ketiga Dari Pasangan</p>
-                        <p class="parent-names">I Ketut Suana & Ni Made Bari (alm.)</p>
-                        <p class="address">Desa Adat Batuaji, Batubulan Kangin - Gianyar</p>
-                    </div>
+        <div class="couple-card">
+
+            <!-- MEMPELAI PRIA -->
+            <div class="person-card male fade-photo">
+
+                <div class="person-image-wrapper">
+                    <img src="https://gurubaru.github.io/black-gold/prawed/groom.webp" alt="Mempelai Pria" class="person-image">
                 </div>
-                <div class="card-right couple-photo">
-                    <div class="circular-frame">
-                        <div class="photo-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/RV_08717.webp')"></div>
-                        <div class="gradient-overlay left"></div>
-                        <div class="frame-border"></div>
-                    </div>
-                </div>
+
+                <span class="ceremony-label">MEMPELAI PRIA</span>
+
+                <h3 class="person-name">I KETUT SUNARTA</h3>
+
+                <p class="person-detail">
+                    Putra Keempat Dari Pasangan
+                </p>
+
+                <p class="parent-names">
+                    I Made Kacung (alm.) & Ni Wayan Mangkin
+                </p>
+
+                <p class="address">
+                    Desa Adat Batuaji, Batubulan Kangin - Gianyar
+                </p>
             </div>
+
+            <!-- TENGAH -->
+            <div class="separator-wrapper">
+                <div class="separator-line"></div>
+                <div class="separator-ampersand">&</div>
+                <div class="separator-line"></div>
+            </div>
+
+            <!-- MEMPELAI WANITA -->
+            <div class="person-card female fade-photo">
+
+                <div class="person-image-wrapper">
+                    <img src="https://gurubaru.github.io/black-gold/prawed/bride.webp" alt="Mempelai Wanita" class="person-image">
+                </div>
+
+                <span class="ceremony-label">MEMPELAI WANITA</span>
+
+                <h3 class="person-name">NI KOMANG MINALIATI</h3>
+
+                <p class="person-detail">
+                    Putri Ketiga Dari Pasangan
+                </p>
+
+                <p class="parent-names">
+                    I Ketut Suana & Ni Made Bari (alm.)
+                </p>
+
+                <p class="address">
+                    Desa Adat Batuaji, Batubulan Kangin - Gianyar
+                </p>
+            </div>
+
+        </div>
         </section>
 
         <!-- Card 3: Event Details -->
@@ -135,7 +164,7 @@
             <div class="card-inner">
                 <div class="card-left event-image">
                     <div class="circular-frame">
-                        <div class="photo-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/RV_08772.webp')"></div>
+                        <div class="photo-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/RV_08717.webp')"></div>
                         <div class="gradient-overlay left"></div>
                         <div class="frame-border"></div>
                     </div>
@@ -200,46 +229,64 @@
         <div class="corner-ornament top-right" aria-hidden="true"></div>
         <div class="corner-ornament bottom-left" aria-hidden="true"></div>
         <div class="corner-ornament bottom-right" aria-hidden="true"></div>
-            <div class="card-inner">
-                <div class="card-left countdown-section">
-                    <h3 class="countdown-title">Menghitung Hari</h3>
-                    <div class="countdown-container" id="countdown">
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="days">00</span>
-                            <span class="countdown-label">Hari</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="hours">00</span>
-                            <span class="countdown-label">Jam</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="minutes">00</span>
-                            <span class="countdown-label">Menit</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="seconds">00</span>
-                            <span class="countdown-label">Detik</span>
-                        </div>
+        <div class="card-inner">
+            <!-- OVERLAY -->
+            <div class="card-overlay"></div>
+            <div class="card-left countdown-section">
+                <h3 class="countdown-title">Menghitung Hari</h3>
+
+                <div class="countdown-container" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Hari</span>
                     </div>
-                    <p class="countdown-subtitle">Menuju Hari Bahagia</p>
+
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Jam</span>
+                    </div>
+
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Menit</span>
+                    </div>
+
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Detik</span>
+                    </div>
                 </div>
-                <div class="card-right gift-section">
-                    <h3 class="gift-title">Wedding Gift</h3>
-                    <p class="gift-subtitle">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberikan tanda kasih, kami menyediakan:</p>
-                    
-                    <div class="gift-options">
-                        <div class="gift-card bank-transfer">
-                            <span class="gift-label">Transfer Bank</span>
-                            <div class="bank-info">
-                                <img src="https://gurubaru.github.io/black-gold/prawed/bca.webp" alt="BCA" class="bank-logo">
-                                <span class="account-number">7730913022</span>
-                                <span class="account-name">a.n. I Ketut Sunarta</span>
-                            </div>
-                            <button class="btn-copy" data-copy="7730913022">Salin Nomor</button>
+
+                <p class="countdown-subtitle">Menuju Hari Bahagia</p>
+            </div>
+
+            <div class="card-right gift-section">
+                <h3 class="gift-title">Wedding Gift</h3>
+
+                <p class="gift-subtitle">
+                    Doa restu Anda merupakan karunia yang sangat berarti bagi kami.
+                    Namun jika Anda ingin memberikan tanda kasih, kami menyediakan:
+                </p>
+
+                <div class="gift-options">
+                    <div class="gift-card bank-transfer">
+                        <span class="gift-label">Transfer Bank</span>
+
+                        <div class="bank-info">
+                            <img src="https://gurubaru.github.io/black-gold/prawed/bca.webp" alt="BCA" class="bank-logo">
+
+                            <span class="account-number">7730913022</span>
+                            <span class="account-name">a.n. I Ketut Sunarta</span>
                         </div>
+
+                        <button class="btn-copy" data-copy="7730913022">
+                            Salin Nomor
+                        </button>
                     </div>
                 </div>
             </div>
+
+        </div>
         </section>
 
         <!-- Card 6: Closing & Gallery -->
@@ -262,24 +309,27 @@
                     </div>
                 </div>
                 <div class="card-right gallery-section">
-                    <h3 class="gallery-title">Galeri Momen</h3>
                     <div class="masonry-gallery">
                         <div class="gallery-item tall">
-                            <img src="https://gurubaru.github.io/black-gold/prawed/RV_08741.webp" alt="Momen 1" loading="lazy">
+                            <img src="https://gurubaru.github.io/black-gold/prawed/image_2.webp" alt="Momen 1" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://gurubaru.github.io/black-gold/prawed/RV_08792.webp" alt="Momen 2" loading="lazy">
+                            <img src="https://gurubaru.github.io/black-gold/prawed/image_12.webp" alt="Momen 2" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://gurubaru.github.io/black-gold/prawed/RV_08921.webp" alt="Momen 3" loading="lazy">
+                            <img src="https://gurubaru.github.io/black-gold/prawed/image_14.webp" alt="Momen 3" loading="lazy">
                         </div>
                         <div class="gallery-item wide">
-                            <img src="https://gurubaru.github.io/black-gold/prawed/RV_08820.webp" alt="Momen 4" loading="lazy">
+                            <img src="https://gurubaru.github.io/black-gold/prawed/image_11.webp" alt="Momen 4" loading="lazy">
                         </div>
                         <div class="gallery-item">
-                            <img src="https://gurubaru.github.io/black-gold/prawed/RV_08959.webp" alt="Momen 5" loading="lazy">
+                            <img src="https://gurubaru.github.io/black-gold/prawed/image_13.webp" alt="Momen 5" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://gurubaru.github.io/black-gold/prawed/RV_08792.webp" alt="Momen 6" loading="lazy">
                         </div>
                     </div>
+                    <h3 class="gallery-title">Galeri Momen</h3>
                 </div>
             </div>
         </section>
@@ -299,7 +349,7 @@
                     </div>
                 </div>
                 <div class="card-right comment-form-section">
-                    <div class="form-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/RV_08741.webp')"></div>
+                    <div class="form-bg" style="background-image: url('https://gurubaru.github.io/black-gold/prawed/image_16.webp')"></div>
                     <div class="form-overlay"></div>
                     <form class="comment-form" id="comment-form">
                         <h4 class="form-title">Kirim Ucapan</h4>
