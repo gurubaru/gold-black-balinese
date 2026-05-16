@@ -1168,9 +1168,9 @@ body.no-scroll {
     justify-content: center;
 }
 
-.location-title { font-family: var(--font-title); font-size: 1.75rem; color: var(--text); margin-bottom: 16px; }
-.location-address { font-size: 1.25rem; color: var(--accent-gold); margin-bottom: 12px; font-weight: 500; }
-.location-full { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 32px; line-height: 1.6; }
+.location-title { font-family: var(--font-title); font-size: 1.75rem; color: var(--text); margin-bottom: 16px;z-index: 2; }
+.location-address { font-size: 1.25rem; color: var(--accent-gold); margin-bottom: 12px; font-weight: 500; z-index: 2; }
+.location-full { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 32px; line-height: 1.6; z-index: 2; }
 
 .btn-location {
     display: inline-flex;
@@ -1185,6 +1185,7 @@ body.no-scroll {
     text-decoration: none;
     transition: var(--transition-smooth);
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    z-index: 2;
 }
 
 .btn-location:hover {
